@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Car - CarHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        .search-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .search-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .search-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .search-input {
+            padding: 12px 15px;
+            width: 100%;
+            max-width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .search-btn {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .search-btn:hover {
+            background: #c0392b;
+        }
+        .result-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 200px;
+            text-align: left;
+        }
+        .result-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .car-item {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .car-item:last-child {
+            border-bottom: none;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">CarHub</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a >
+            <a href="seller.html">Seller Center</a >
+            <a href="register.html">Register</a >
+            <a href="login.html">Login</a >
+            <a href="add-car.html">Add Car</a >
+            <a href="search.html">Search Car</a >
+        </div>
+    </div>
+
+    <div class="search-container">
+        <h2 class="search-title">Find Your Desired Car</h2>
+        <form class="search-form" onsubmit="return searchCar()">
+            <input type="text" id="searchModel" class="search-input" placeholder="Enter car model" required>
+            <input type="number" id="searchYear" class="search-input" placeholder="Enter manufacture year" min="1900" max="2025" required>
+            <button type="submit" class="search-btn">Search Car</button>
+        </form>
+
+        <div class="result-box">
+            <h3 class="result-title">Search Results</h3>
+            <div id="resultContent">
+                Please enter model and year to search~
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchCar() {
+            const model = document.getElementById('searchModel').value;
+            const year = document.getElementById('searchYear').value;
+            
+            const result = `
+                <div class="car-item">
+                    <h4>Model: ${model}</h4>
+                    <p>Year: ${year}</p >
+                    <p>Status: Vehicle information found</p >
+                </div>
+            `;
+            
+            document.getElementById('resultContent').innerHTML = result;
+            return false;
+        }
+    </script>
+</body>
+</html>

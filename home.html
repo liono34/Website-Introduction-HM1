@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CarHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            margin-bottom: 100px;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .col-4 {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .col-4 h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .col-4 p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .col-4 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        .featured-image {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .featured-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            max-height: 400px;
+            object-fit: contain;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+            .row {
+                flex-direction: column;
+            }
+            .col-4 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">CarHub</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="seller.html">Seller Center</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="add-car.html">Add Car</a>
+            <a href="search.html">Search Car</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">CarHub：Fast to sell, easy to own.</h1>
+
+        <div class="row">
+            <div class="col-4">
+                <h1>Fast To Sell</h1>
+                <p>Browse thousands of new and used cars from trusted sellers nationwide. Find sedans, SUVs, trucks, and more.</p>
+                <p>Our responsive design ensures a seamless experience on any device.</p>
+            </div>
+
+            <div class="col-4">
+                <h1>Featured Vehicle</h1>
+                <p>Choose your ideal car based on specific features. Carhub has any model you want.</p>
+                <img src="image2.png" alt="Featured Vehicle">
+            </div>
+
+            <div class="col-4">
+                <h1>Easy To Own</h1>
+                <p>Use our powerful search tools to filter by make, model, year, price, and location to find the perfect vehicle for you.</p>
+                <p>Save your favorites and compare different options side by side.</p>
+            </div>
+
+        </div>
+
+        <h1 class="title">Start selling/buying!</h1>
+        
+        <div class="featured-image">
+            <img src="image.png" alt="Featured Vehicle">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <h2>Thanks for visiting CarHub</h2>
+    </div>
+</body>
+</html>
+
